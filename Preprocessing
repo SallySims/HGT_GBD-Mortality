@@ -1,0 +1,48 @@
+## Preprocessing
+#### Needed packages
+!pip install torch_geometric
+
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+import statistics
+from google.colab import drive
+import os
+import torch
+import torch.nn as nn
+from torch_geometric.data import HeteroData
+from torch_geometric.nn import HGTConv, Linear
+from sklearn.metrics import mean_squared_error, r2_score
+from sklearn.preprocessing import LabelEncoder
+
+
+drive.mount('/content/drive') ## I used google colab 
+
+## Loading data
+
+# Listing contents of the mounted drive to help debug the path
+print(os.listdir('/content/drive/'))
+
+os.chdir ('/content/drive/MyDrive/MyProjects/GBDProject/Transformer(Graph)') ## my working directory
+
+### Listing contents of the current directory to verify data.csv
+print(os.listdir('.'))
+
+df1 = pd.read_csv('GBD_DataAll.csv')
+df2 = pd.read_csv('SDI_GBD.csv')
+df1.head()
+df2.head()
+
+## Merging All the data
+BigGBD=pd.merge(df1,df2,on=['location','year', 'sex'])
+BigGBD
+
+### Select8ng only variables of interest"
+MeBigData=BigGBD[["location","sex","age_x","cause",	"risk_factor",	"year",
+                  "deathratevalue","SDI_Quintile"]].copy()
+MeBigData
+
+MeBigData[["risk_factor"]].value_counts()
+
+print(f"Loaded data shape: {MeBigData.shape}")
