@@ -18,15 +18,7 @@ Three model specifications are estimated for each configuration:
 ---
 
 ## Key Findings
-
-| Disease | Best Improvement | Configuration | Interpretation |
-|---------|-----------------|---------------|----------------|
-| Stroke  | +15.9% [3.17, 27.72] | Graph A, Risk Only | Reliable spatial predictive gain |
-| HHD     | −131.8% | All configurations | Absent spatial structure |
-| IHD     | −0.9% to −77.1% | All configurations | No reliable spatial signal |
-| Diabetes| −167% to −202% | All configurations | No spatial signal |
-
----
+See Research paper
 
 ## Repository Structure
 
