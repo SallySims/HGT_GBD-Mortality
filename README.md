@@ -71,7 +71,7 @@ Run files sequentially (01 through 11) in Google Colab or Jupyter. Each file dep
 
 If you use this code, please cite:
 
-> Simmons, S. (2026). Heterogeneous Graph Transformer Modelling of Spatial Patterns in NCD Mortality Across East Africa. *[Journal Name]*.
+> Simmons, S. (2026). Heterogeneous Graph Transformer Modelling .... *[Journal Name]*.
 
 ---
 
