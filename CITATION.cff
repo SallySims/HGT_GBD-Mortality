@@ -1,0 +1,114 @@
+cff-version: 1.2.0
+message: >
+  If you use this code, notebook, or framework in your research,
+  please cite it using the metadata below.
+type: software
+title: >
+  HGT_GBD-Mortality: Spatial Predictive Modelling of Cause-Specific
+  NCD Mortality in East Africa Using Heterogeneous Graph Transformers
+abstract: >
+  A Heterogeneous Graph Transformer (HGT) framework for detecting
+  spatial predictive patterns in cause-specific non-communicable
+  disease (NCD) mortality — hypertensive heart disease (HHD),
+  ischaemic heart disease (IHD), stroke, and diabetes — across five
+  East African countries (Burundi, Kenya, Rwanda, Tanzania, Uganda)
+  using Global Burden of Disease (GBD) data spanning 1990–2023.
+
+  The framework implements two graph configurations: Graph A
+  (both-sex × age × country, 80 nodes) and Graph B
+  (male/female × age × country, 160 nodes), each estimated under
+  three covariate specifications (SDI-only, Risk-only, Full).
+
+  Key methodological features include: multi-seed evaluation
+  (seeds = [42, 123, 456, 789, 1024]); bootstrap 95% confidence
+  intervals; CI-based reliability classification; OLS spatial lag
+  and Maximum Likelihood Spatial Lag (CAR-type) benchmarks;
+  Moran's I permutation test on residuals; degradation diagnostic
+  (training loss curves, gradient L2 norms); ablation study;
+  rolling temporal window validation; attention weight analysis
+  (node embedding norms); and Monte Carlo GBD uncertainty
+  propagation.
+
+  Implementation: Python 3.10, PyTorch, PyTorch Geometric (HGTConv),
+  NumPy, pandas, scikit-learn, libpysal, esda, matplotlib.
+  Designed for Google Colab with GPU acceleration.
+  Hidden dimension: 64; Attention heads: 4; HGTConv layers: 2;
+  Learning rate: 0.003; Weight decay: 1e-4; Dropout: 0.2;
+  Epochs: 200.
+authors:
+  - family-names: Simmons
+    given-names: Sally Sonia
+    affiliation: >
+      Department of Social Policy, London School of Economics
+      and Political Science, United Kingdom;
+      The Inclusion Initiative, London School of Economics
+      and Political Science, United Kingdom
+    email: s.simmons1@lse.ac.uk
+  - family-names: Hagan
+    given-names: John Elvis
+    name-suffix: Jr.
+    affiliation: >
+      Neurocognition and Action–Biomechanics Research Group,
+      Faculty of Psychology and Sports Science,
+      Bielefeld University, Germany;
+      Department of Health, Physical Education and Recreation,
+      University of Cape Coast, Ghana
+    email: elvis.hagan@ucc.edu.gh
+  - family-names: Nieto-González
+    given-names: Imanol L.
+    affiliation: >
+      Department of Applied Economics and Quantitative Methods,
+      University of La Laguna, Spain
+    email: inietogo@ull.edu.es
+  - family-names: Schack
+    given-names: Thomas
+    affiliation: >
+      Neurocognition and Action–Biomechanics Research Group,
+      Faculty of Psychology and Sports Science,
+      Bielefeld University, Germany
+    email: thomas.schack@uni-bielefeld.de
+version: 1.0.0
+date-released: "2026-06-10"
+url: https://github.com/SallySims/HGT_GBD-Mortality
+repository-code: https://github.com/SallySims/HGT_GBD-Mortality
+license: MIT
+keywords:
+  - heterogeneous graph transformer
+  - HGT
+  - PyTorch Geometric
+  - spatial predictive modelling
+  - non-communicable diseases
+  - NCD mortality
+  - East Africa
+  - Global Burden of Disease
+  - GBD
+  - hypertensive heart disease
+  - ischaemic heart disease
+  - stroke
+  - diabetes
+  - deep learning
+  - graph neural network
+  - epidemiology
+  - public health
+  - LMIC
+  - sex-disaggregated analysis
+  - Monte Carlo uncertainty
+  - attention mechanism
+  - ablation study
+references:
+  - type: software
+    authors:
+      - family-names: Simmons
+        given-names: Sally Sonia
+      - family-names: Hagan
+        given-names: John Elvis
+        name-suffix: Jr.
+      - family-names: Nieto-González
+        given-names: Imanol L.
+      - family-names: Schack
+        given-names: Thomas
+    title: >
+      HGT_GBD-Mortality: Spatial Predictive Modelling of Cause-Specific
+      NCD Mortality in East Africa Using Heterogeneous Graph Transformers
+    year: 2026
+    url: https://github.com/SallySims/HGT_GBD-Mortality
